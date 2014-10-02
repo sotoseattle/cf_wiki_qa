@@ -27,8 +27,8 @@ class PagesController < ApplicationController
   end
 
   def update
+    @page.users |= [current_user]
     if @page.update(page_params)
-      @page.users << current_user
       redirect_to @page, notice: 'Page was successfully updated.'
     else
       render :edit
@@ -37,7 +37,6 @@ class PagesController < ApplicationController
 
   def destroy
     @page.destroy
-    @page.users << current_user
     redirect_to pages_url, notice: 'Page was successfully destroyed.'
   end
 
