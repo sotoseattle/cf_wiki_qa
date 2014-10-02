@@ -1,3 +1,28 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  padding: 1em 2em 2em 2em;
+}
+
+tr.rowlist{
+  line-height: 30px;
+}
+
+.question{
+  margin: 1em;
+  padding: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+
+}
+
+.response{
+  margin: 1em;
+  padding: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+}

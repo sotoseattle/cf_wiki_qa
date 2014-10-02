@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -16,9 +17,9 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(page_params)
-
+    @page = current_user.pages.new(page_params)
     if @page.save
+      @page.users << current_user
       redirect_to @page, notice: 'Page was successfully created.'
     else
       render :new
@@ -27,6 +28,7 @@ class PagesController < ApplicationController
 
   def update
     if @page.update(page_params)
+      @page.users << current_user
       redirect_to @page, notice: 'Page was successfully updated.'
     else
       render :edit
@@ -35,15 +37,17 @@ class PagesController < ApplicationController
 
   def destroy
     @page.destroy
+    @page.users << current_user
     redirect_to pages_url, notice: 'Page was successfully destroyed.'
   end
 
   private
-    def set_page
-      @page = Page.find(params[:id])
-    end
 
-    def page_params
-      params.require(:page).permit(:question, :answer)
-    end
+  def set_page
+    @page = Page.find(params[:id])
+  end
+
+  def page_params
+    params.require(:page).permit(:question, :answer)
+  end
 end

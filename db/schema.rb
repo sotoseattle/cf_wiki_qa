@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002001629) do
+ActiveRecord::Schema.define(version: 20141002003903) do
 
   create_table "pages", force: true do |t|
     t.string   "question"
     t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "pages_users", id: false, force: true do |t|
+    t.integer "page_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: true do |t|
