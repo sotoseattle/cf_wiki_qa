@@ -3,7 +3,7 @@ users = %w(pepe juan marisa antonio lucas aniceto choni lucy lola).map do |name|
     email: "#{name}@hola.com",
     password: '12345678',
     password_confirmation: '12345678')
-  u.save!(:validate => false)
+  u.save!(validate: false)
   u
 end
 
@@ -31,4 +31,3 @@ pages.each do |p|
     u.pages << p
   end
 end
-

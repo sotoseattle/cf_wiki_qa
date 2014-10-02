@@ -13,3 +13,19 @@ The  detailed view of a Question/Answer not only provides the answer so sought, 
 These contributors are shown as links that direct to a page where we can see the list of Questions they contributed to.
 
 This functionality is considered private and unauthenticated users cannot view access it.
+
+### Installation
+
+clone, bundle, migrate, seed, & run
+
+### Technologies
+
+- Rails 4.1.6
+- MySQL databse
+- No BDD tests to rely upon
+- No JavaScript to make your experience nicer
+- Minimal CSS so you can get depressed
+
+### Author
+
+Javier Soto
