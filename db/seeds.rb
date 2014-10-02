@@ -1,4 +1,4 @@
-users = %w(pepe juan marisa antonio lucas aniceto).map do |name|
+users = %w(pepe juan marisa antonio lucas aniceto choni lucy lola).map do |name|
   u = User.new(
     email: "#{name}@hola.com",
     password: '12345678',
@@ -8,11 +8,14 @@ users = %w(pepe juan marisa antonio lucas aniceto).map do |name|
 end
 
 questions = [
-  'Why is an alarm clock going "off" when it actually turns on?',
+  'If quizzes are quizzical, what are tests?',
   'Why does mineral water that has "trickled through mountains for centuries" go out of date next year?',
   'Why do people point to their wrist when asking for the time, but people don\'t point to their crotch when they ask where the bathroom is?',
-  'Why do they sterilize needles for lethal injections?',
+  'If Wile E coyote has enough money to by all that Acme crap why doesn\'t he buy his dinner?',
   'If a cat always lands on its feet, and buttered bread always lands butter side down, what happens if you tie buttered toast to a cat?',
+  'If electricity comes from electrons, does morality come from morons?',
+  'Now that Microsoft is so big, should it be called Macrosoft?',
+  'If your car says Dodge on the front of it, do you really need a horn?',
   'Why is Greenland called green when it is covered in ice?']
 
 pages = []

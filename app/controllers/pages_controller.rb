@@ -41,6 +41,10 @@ class PagesController < ApplicationController
     redirect_to pages_url, notice: 'Page was successfully destroyed.'
   end
 
+  def userlist
+    @user = User.find(params[:u])
+  end
+
   private
 
   def set_page

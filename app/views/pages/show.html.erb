@@ -17,5 +17,7 @@
   <%= render @page.users %>
 </ul>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<div class='footer'>
+  <%= link_to 'Edit', edit_page_path(@page) %> |
+  <%= link_to 'Back', pages_path %>
+</div>
