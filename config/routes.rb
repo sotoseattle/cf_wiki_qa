@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get '/users_list/:u' => 'pages#userlist'
+  get '/users/editorship/:user_id' => 'users#editorship'
 
   resources :pages
   root 'pages#index'
