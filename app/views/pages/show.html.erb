@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<strong>Question:</strong>
+<div class='question'>
+  <%= @page.question %>
+</div>
+
+<strong>Answer:</strong>
+<div class='response'>
+  <%= @page.answer %>
+</div>
+
+<hr/>
+
+<h4>Modified by:</h4>
+<ul>
+  <%= render @page.users %>
+</ul>
+
+<div class='footer'>
+  <%= link_to 'Edit', edit_page_path(@page) %> |
+  <%= link_to 'Back', pages_path %>
+</div>
